@@ -7,11 +7,13 @@ build:
   stage: build
   script:
     - dotnet build ./AutoRepayment
-    - cp AutoRepayment/bin/Debug/netstandard2.1/AutoRepayment.dll AutoRepayment.dll
+    - mkdir auto-repayment
+    - cp mod.json auto-repayment/
+    - cp preview.png auto-repayment/
+    - cp AutoRepayment/bin/Debug/netstandard2.1/AutoRepayment.dll auto-repayment/
   artifacts:
     name: "auto-repayment"
     paths:
-      - mod.json
-      - AutoRepayment.dll
+      - auto-repayment
   only:
     - master
