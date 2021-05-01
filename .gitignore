@@ -1,0 +1,9 @@
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+.idea
+
+# artifacts
+bin
+obj
