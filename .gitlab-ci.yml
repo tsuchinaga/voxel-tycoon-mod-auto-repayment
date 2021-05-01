@@ -7,3 +7,7 @@ build-project:
   stage: build
   script:
     - dotnet build ./AutoRepayment
+  artifacts:
+    paths:
+      - mod.json
+      - AutoRepayment/bin/Debug/netstandard2.1/AutoRepayment.dll
