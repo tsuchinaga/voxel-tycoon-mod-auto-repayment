@@ -3,11 +3,14 @@ image: mcr.microsoft.com/dotnet/sdk
 stages:
   - build
 
-build-project:
+build:
   stage: build
   script:
     - dotnet build ./AutoRepayment
+    - cp AutoRepayment/bin/Debug/netstandard2.1/AutoRepayment.dll AutoRepayment.dll
   artifacts:
     paths:
       - mod.json
-      - AutoRepayment/bin/Debug/netstandard2.1/AutoRepayment.dll
+      - AutoRepayment.dll
+  only:
+    - master
