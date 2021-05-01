@@ -1,0 +1,9 @@
+image: mcr.microsoft.com/dotnet/sdk
+
+stages:
+  - build
+
+build-project:
+  stage: build
+  script:
+    - dotnet build ./AutoRepayment
